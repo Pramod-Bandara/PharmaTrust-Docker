@@ -1,0 +1,39 @@
+{
+  "name": "pharmatrust-scripts",
+  "version": "1.0.0",
+  "description": "Demo data seeding and testing utilities for PharmaTrust",
+  "main": "seed-database.js",
+  "scripts": {
+    "setup": "node setup-demo.js",
+    "seed": "node seed-database.js",
+    "blockchain": "node blockchain-demo-data.js",
+    "test": "node test-workflows.js",
+    "validate": "node validate-setup.js",
+    "clean": "node clean-demo-data.js",
+    "reset": "npm run clean && npm run setup",
+    "integration": "node test-integration.js",
+    "simple": "node simple-workflow-test.js",
+    "test:ml": "node test-ml-integration.js",
+    "arduino": "node arduino-usb-forwarder.js",
+    "arduino:help": "node arduino-usb-forwarder.js --help",
+    "deploy": "node deploy-production.js",
+    "deploy:help": "node deploy-production.js --help"
+  },
+  "dependencies": {
+    "@serialport/parser-readline": "^12.0.0",
+    "axios": "^1.12.2",
+    "mongodb": "^6.0.0",
+    "serialport": "^12.0.0",
+    "ws": "^8.18.3"
+  },
+  "keywords": [
+    "pharmatrust",
+    "demo",
+    "testing",
+    "seeding",
+    "pharmaceutical",
+    "supply-chain"
+  ],
+  "author": "PharmaTrust Team",
+  "license": "MIT"
+}
