@@ -12,3 +12,8 @@ The web frontend service is built using:
 - **JWT-based authentication** with role-based access control
 - **Real-time IoT monitoring** with live charts and anomaly detection
 - **Blockchain verification** integration for batch authenticity
+
+## Instruction to Deploy
+
+docker compose up -d
+
