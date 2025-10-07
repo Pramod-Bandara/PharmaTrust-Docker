@@ -1,0 +1,53 @@
+# Node
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tsbuildinfo
+
+# Logs
+logs
+*.log
+**/*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+# .env
+# **/.env
+# **/.env.*
+# web/.env.local
+# web/.env.development.local
+# web/.env.test.local
+# web/.env.production.local
+
+# Build outputs
+dist/
+**/dist/
+build/
+**/build/
+.next/
+web/.next/
+.expo/
+.expo-shared/
+
+# TypeScript
+*.d.ts.map
+
+# Docker artifacts
+**/data/
+**/log/
+**/tmp/
+
+# IDE
+.vscode/
+.idea/
+
+# Misc
+coverage/
+*.coverage
+

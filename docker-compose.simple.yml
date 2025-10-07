@@ -1,0 +1,46 @@
+# Simplified Docker Compose for PharmaTrust Demo
+# Use this if you have network connectivity issues with the main compose file
+
+services:
+  mongo:
+    image: mongo:7
+    container_name: pharmatrust-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=pharmatrust
+
+  redis:
+    image: redis:7-alpine
+    container_name: pharmatrust-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
+    volumes:
+      - redis-data:/data
+
+  mosquitto:
+    image: eclipse-mosquitto:2.0
+    container_name: pharmatrust-mosquitto
+    restart: unless-stopped
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./mqtt/config:/mosquitto/config
+      - ./mqtt/data:/mosquitto/data
+      - ./mqtt/log:/mosquitto/log
+
+volumes:
+  mongo-data:
+    driver: local
+  redis-data:
+    driver: local
+
+networks:
+  default:
+    driver: bridge
