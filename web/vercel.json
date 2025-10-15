@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "src/app/api/**": { "maxDuration": 30 }
+  },
+  "env": {
+    "MONGODB_URI": "@mongodb-uri",
+    "MONGODB_DB": "@mongodb-db",
+    "JWT_SECRET": "@jwt-secret",
+    "JWT_EXPIRES_IN": "@jwt-expires-in",
+    "NEXT_PUBLIC_API_URL": "@public-api-url"
+  }
+}

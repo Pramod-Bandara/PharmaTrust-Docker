@@ -1,0 +1,53 @@
+{
+  "name": "pharmatrust-scripts",
+  "version": "1.0.0",
+  "description": "Demo data seeding and testing utilities for PharmaTrust",
+  "main": "seed-database.js",
+  "scripts": {
+    "setup": "node setup-demo.js",
+    "seed": "node seed-database.js",
+    "migrate": "node migrate-password-hashes.js",
+    "blockchain": "node blockchain-demo-data.js",
+    "test": "node test-workflows.js",
+    "test:login": "node test-login.js",
+    "validate": "node validate-setup.js",
+    "clean": "node clean-demo-data.js",
+    "reset": "npm run clean && npm run setup",
+    "integration": "node test-integration.js",
+    "simple": "node simple-workflow-test.js",
+    "test:ml": "node test-ml-integration.js",
+    "arduino": "node arduino-usb-forwarder.js",
+    "arduino:help": "node arduino-usb-forwarder.js --help",
+    "deploy": "node deploy-production.js",
+    "deploy:help": "node deploy-production.js --help",
+    "firebase:validate": "node validate-firebase.js",
+    "firebase:help": "node validate-firebase.js --help",
+    "iot:demo": "node test-iot-temperature-alerts.js",
+    "iot:test": "node test-iot-temperature-alerts.js --test-connection",
+    "iot:continuous": "node test-iot-temperature-alerts.js --continuous",
+    "iot:critical": "node test-iot-temperature-alerts.js --scenario critical",
+    "iot:warning": "node test-iot-temperature-alerts.js --scenario warning",
+    "iot:popup": "node test-iot-temperature-alerts.js --popup-demo",
+    "iot:help": "node test-iot-temperature-alerts.js --help"
+  },
+  "dependencies": {
+    "@serialport/parser-readline": "^12.0.0",
+    "axios": "^1.12.2",
+    "bcrypt": "^5.1.1",
+    "firebase-admin": "^13.5.0",
+    "mongodb": "^6.0.0",
+    "mqtt": "^5.14.1",
+    "serialport": "^12.0.0",
+    "ws": "^8.18.3"
+  },
+  "keywords": [
+    "pharmatrust",
+    "demo",
+    "testing",
+    "seeding",
+    "pharmaceutical",
+    "supply-chain"
+  ],
+  "author": "PharmaTrust Team",
+  "license": "MIT"
+}
